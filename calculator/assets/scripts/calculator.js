@@ -41,9 +41,7 @@ function calculate(){
             errorflag = true; 
         }
 
-    
     if(!errorflag) {
-
 
         let operand1fp = parseFloat (operand1); 
         let operand2fp = parseFloat (operand2); 
