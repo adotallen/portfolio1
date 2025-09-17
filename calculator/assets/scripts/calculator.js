@@ -1,64 +1,104 @@
-function calculate() {
-            // Clear previous errors
-            document.getElementById("error1").textContent = "";
-            document.getElementById("error2").textContent = "";
-            document.getElementById("errorOp").textContent = "";
-            document.getElementById("result").textContent = "";
+function calculate(){
+    "use strict"; 
 
-            const operand1 = document.getElementById("operand1").value.trim();
-            const operand2 = document.getElementById("operand2").value.trim();
-            const operator = document.querySelector('input[name="operator"]:checked');
+    document.getElementById("Operand1Error").innerHTML = ""; 
+    document.getElementById("Operand2Error").innerHTML = ""; 
+    document.getElementById("OperatorError").innerHTML = ""; 
+    document.getElementById("Result").innerHTML = ""; 
 
-            let hasError = false;
+    let errorflag= false; 
 
-            if (operand1 === "") {
-                document.getElementById("error1").textContent = "Operand 1 is Required";
-                hasError = true;
-            }
+    let operand1 = document.getElementById("Operand1").value; 
 
-            if (!operator) {
-                document.getElementById("errorOp").textContent = "Operator is Required";
-                hasError = true;
-            }
+    if(operand1 == ""){
+        document.getElementById("Operand1Error").innerHTML = "Operand 1 is required"; 
+        errorflag = true; 
+    }
 
-            if (operand2 === "") {
-                document.getElementById("error2").textContent = "Operand 2 is Required";
-                hasError = true;
-            }
+    if(isNaN(operand1)) {
+        document.getElementById("Operand1Error").innerHTML = "Operand 1 should be a floating number";
+        errorflag = true; 
+    }
 
-            if (hasError) return false;
+    let operand2 = document.getElementById("Operand2").value; 
 
-            const num1 = parseFloat(operand1);
-            const num2 = parseFloat(operand2);
-            let result;
+    if(operand2 == ""){
+        document.getElementById("Operand2Error").innerHTML = "Operand 2 is required"; 
+        errorflag = true; 
 
-            switch (operator.value) {
-                case "+":
-                    result = num1 + num2;
-                    break;
-                case "-":
-                    result = num1 - num2;
-                    break;
-                case "*":
-                    result = num1 * num2;
-                    break;
-                case "/":
-                    if (num2 === 0) {
-                        result = "Cannot divide by zero";
-                    } else {
-                        result = num1 / num2;
-                    }
-                    break;
-            }
+    }
 
-            document.getElementById("result").textContent = result;
-            return false; // Prevent form submission
+    if(isNaN(operand2)) {
+        document.getElementById("Operand2Error").innerHTML = "Operand 2 must be a floating number"; 
+        errorflag = true; 
+    }
+
+    if(!document.getElementById("AddOperator").checked &&
+        !document.getElementById("SubtractOperator").checked &&
+        !document.getElementById("MultiplyOperator").checked &&
+        !document.getElementById("DivideOperator").checked) {
+            document.getElementById("OperatorError").innerHTML = "Operator is required"; 
+            errorflag = true; 
         }
 
-        function clearForm() {
-            document.getElementById("calcForm").reset();
-            document.getElementById("result").textContent = "";
-            document.getElementById("error1").textContent = "";
-            document.getElementById("error2").textContent = "";
-            document.getElementById("errorOp").textContent = "";
+    
+    if(!errorflag) {
+
+
+        let operand1fp = parseFloat (operand1); 
+        let operand2fp = parseFloat (operand2); 
+
+
+        let operator; 
+        if (document.getElementById("AddOperator").checked) {
+            operator = document.getElementById("AddOperator").value; 
         }
+        if (document.getElementById("SubtractOperator").checked) {
+            operator = document.getElementById("SubtractOperator").value; 
+        }
+        if (document.getElementById("MultiplyOperator").checked) {
+            operator = document.getElementById("MultiplyOperator").value; 
+        }
+        if (document.getElementById("DivideOperator").checked) {
+            operator = document.getElementById("DivideOperator").value; 
+        }
+
+        let result; 
+
+        if (operator == "Add") {
+            result = operand1fp+operand2fp; 
+        }
+
+        if (operator == "Minus") {
+            result = operand1fp-operand2fp
+        }
+
+        if (operator == "Multiply") {
+            result = operand1fp * operand2fp
+        }
+
+        if (operator == "Divide") {
+            result = operand1fp/operand2fp
+        }
+
+        document.getElementById("Result").innerHTML = result.toString(); 
+
+}
+
+}
+
+function clearform() {
+
+    document.getElementById("Operand1").value = ""; 
+    document.getElementById("Operand2").value = ""; 
+    document.getElementById("Operand1Error").innerHTML = ""; 
+    document.getElementById("Operand2Error").innerHTML = ""; 
+    document.getElementById("AddOperator").checked = false; 
+    document.getElementById("SubtractOperator").checked = false; 
+    document.getElementById("MultiplyOperator").checked = false; 
+    document.getElementById("DivideOperator").checked = false; 
+    document.getElementById("OperatorError").innerHTML = ""; 
+    document.getElementById("Result").innerHTML = ""; 
+
+}
+

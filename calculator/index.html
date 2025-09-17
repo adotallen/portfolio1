@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="JavaScript Calculator">
-    <meta name="keywords" content="JavaScript, HTML, CSS">
-    <meta name="author" content="Bruce Bauer">
+    <meta name="author" content="Aric Allen">
     <title>JavaScript Calculator</title>
     <link rel="stylesheet" type="text/css" href="assets/style/calculator.css">
 </head>
@@ -12,38 +11,48 @@
 <form id="myform">
     <div class="formcontainer" onsubmit="return false">
         <h1>Javascript Calculator</h1>
-        <fieldset>
-            <legend><strong>Calculator</strong></legend>
+        <fieldset id="detail">
+            <legend><strong>Calculator</strong></legend>  
+            <br>
 
-            <label>Operand 1:
-                <input type="text" id="operand1">
-            </label>
-            <span class="error" id="error1"></span>
-            <br><br>
+            
+                <label class="formlabel" for="Operand1">Operand 1:</label>
+                    <input type="text" id="Operand1" name="Operand1" size="15" maxlength="15">
+                <label class="error" for="Operand1" id="Operand1Error"></label>
+                <br><br>
 
-            <label>Operator:</label>
-            <input type="radio" name="operator" value="+" /> +
-            <input type="radio" name="operator" value="-" /> -
-            <input type="radio" name="operator" value="*" /> *
-            <input type="radio" name="operator" value="/" /> /
-            <span class="error" id="errorOp"></span>
-            <br><br>
 
-            <label>Operand 2:
-                <input type="text" id="operand2">
-            </label>
-            <span class="error" id="error2"></span>
-            <br><br>
+                <label class="formlabel">Operator:</label>
+                <label for="AddOperator">
+                    <input type="radio" name="Operator" id="AddOperator" value="Add"> +
+                </label>
+                <label for="SubtractOperator">
+                    <input type="radio" name="Operator" id="SubtractOperator" value="Minus"> -
+                </label>
+                <label for="MultiplyOperator">
+                    <input type="radio" name="Operator" id="MultiplyOperator" value="Multiply"> *
+                </label>
+                <label for="DivideOperator">
+                    <input type="radio" name="Operator" id="DivideOperator" value="Divide"> /
+                </label>
+                <label for="Operator" class="error" id="OperatorError"></label>
+                <br><br>
 
-            <label>Result:
-                <span id="result"></span>
-            </label>
-            <br><br>
 
-            <div class="buttons">
-                <button type="submit">Calculate</button>
-                <button type="button" onclick="clearForm()">Clear</button>
-            </div>
+                <label class="formlabel" for="Operand2">Operand 2:</label>
+                    <input type="text" id="Operand2" name="Operand2" size="15" maxlength="15">
+                <label class="error" for="Operand2" id="Operand2Error"></label>
+                <br><br>
+
+
+                <label class="formlabel">Result:</label>
+                <span id="Result"></span>
+                <br><br>
+
+
+                <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
+                <input type="button" value="Clear" name="Clear" onclick="clearform();">
+
         </fieldset>
     </div>
 </form>
