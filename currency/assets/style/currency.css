@@ -1,0 +1,43 @@
+.currency-converter {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.currency-converter h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#chart-container {
+    margin-top: 20px;
+    width: 600px;
+    height: 400px;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}

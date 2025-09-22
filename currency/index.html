@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Value History</title>
+    <link rel="stylesheet" href="assets/style/currency.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="currency-converter">
+        <h1>Currency Value History</h1>
+        <div class="form-group">
+            <label for="baseCurrency">Base Currency:</label>
+            <select id="baseCurrency"></select>
+        </div>
+        <div class="form-group">
+            <label for="convertToCurrency">Convert to Currency:</label>
+            <select id="convertToCurrency"></select>
+        </div>
+        <div class="form-group">
+            <label for="fromDate">From Date:</label>
+            <input type="date" id="fromDate">
+        </div>
+        <div class="form-group">
+            <label for="toDate">To Date:</label>
+            <input type="date" id="toDate">
+        </div>
+        <button id="showResults">Show Results</button>
+        <button id="clear">Clear</button>
+        <div id="chart-container">
+            <canvas id="chartjs-0"></canvas>
+        </div>
+    </div>
+    <script src="assets/scripts/currency.js"></script>
+</body>
+</html>
