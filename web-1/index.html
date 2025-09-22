@@ -2,46 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Assessment</title>
+  <meta name="author" content="Aric Allen">
+  <meta name="keywords" content="HTML, CSS, Web Development">
+  <meta name="description" content="A review of HTML and CSS concepts">
+  <title>HTML/CSS Review</title>
   <link rel="stylesheet" href="assets/style/screen.css">
 </head>
 <body>
-  <header id="page-header">
-    <h1>My Assessment</h1>
+  <header>
+    <img src="assets/images/webpage-header.jpg" alt="Webpage Header">
     <nav>
       <ul>
-        <li><a href="#" title="University of Arkansas at Little Rock">UALR</a></li>
-        <li><a href="#" title="Course Homepage">Course Homepage</a></li>
-        <li><a href="#" title="W3C Standards">W3C</a></li>
-        <li><a href="#" title="City of Little Rock">Little Rock</a></li>
-        <li><a href="https://www.yourfavorite.com" title="Go to My Favorite Site">My Favorite Site</a></li>
+        <li><a href="https://ualr.edu/" title="University of Arkansas at Little Rock">UALR</a></li>
+        <li><a href="https://blackboard.ualr.edu/ultra/courses/_278510_1/outline" title="Course Homepage">Course Homepage</a></li>
+        <li><a href="https://validator.w3.org/" title="W3C Standards">W3C</a></li>
+        <li><a href="https://www.littlerock.gov/" title="City of Little Rock">Little Rock</a></li>
+        <li><a href="https://www.twitch.tv" title="Go to My Favorite Site">Twitch</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="content">
-      <p>The most important goal of effective communication is clarity. Clarity is not the same as simplicity. Often, simple things are clear if the message is intended to be brief and small, but often the message is about a complex relationship that can only be presented with a necessarily large amount of data.</p>
-      <p class="alert">This complexity can be made to appear clear by effective organization and presentation and need not be reduced to meaningless “bite­-sized” chunks of data, as simplification usually does.</p>
-      <p>Clarity refers to the focus on one particular message or goal at a time, rather than attempting to accomplish too much at once. Simplicity is often responsible for the "dumbinmg" of information rather than the illumination of it.</p>
+      <img src="assets/images/webpage-image.jpg" alt="Webpage Image" class="content-img">
+      <h2>My Assessment</h2>
+      <p>The most important goal of effective communication is clarity. Clarity is not the same as simplicity. 
+         Often, simple things are clear if the message is intended to be brief and small, but often the message 
+         is about a complex relationship that can only be presented with a necessarily large amount of data.</p>
+      <p class="alert">This complexity can be made to appear clear by effective organization and presentation 
+         and need not be reduced to meaningless “bite­-sized” chunks of data, as simplification usually does.</p>
+      <p>Clarity refers to the focus on one particular message or goal at a time, rather than attempting to 
+         accomplish too much at once. Simplicity is often responsible for the "dumbinmg" of information rather 
+         than the illumination of it.</p>
 
       <h2>Questions</h2>
-      <p>Please answer the following questions below. Remember to markup the information properly using HTML.</p>
+      <ol>
+        <li><b> Explain the difference between the "alt" attribute and the "title" attribute.</b></li>
+        <p><b>Answer:</b> The "alt" attribute (short for alternative text) is used to provide a textual description of an image, primarily for accessibility purposes. It's essential for users who may not be able to view the image due to various reasons such as slow internet connection, browser settings, or visual impairments. Search engines also rely on alt text to understand and index images.
+              The "title" attribute, on the other hand, is used to provide additional information about an element, such as an image, when the user hovers over it. It's often used for supplementary information or tooltips. Unlike the alt attribute, the title attribute is not primarily intended for accessibility purposes, although it can still enhance user experience. Additionally, search engines typically do not use the title attribute for indexing purposes. </p>    
+        <li><b>Please provide an example of how to mark up a definition from the dictionary below.</b></li>
+        <p><b>Answer:</b> To mark up a definition from the dictionary, we can use HTML's <b>dfn</b> (Definition) element. Here's an example using the word "computer" as the definition:<br>
+            <b>Example:</b>The <dfn>computer</dfn> is an electronic device that can perform various tasks by executing pre-programmed instructions.<br>
+            In the above example, The <b>'dfn'</b> element is used to define the term "computer". The content within the <b>'dfn'</b> tags is the actual definition of the term.
 
-      <h3>Explain the difference between the “alt” attribute and the “title” attribute.</h3>
-      <p>Your answer goes here…</p>
-
-      <h3>Please provide an example of how to mark up a definition from the dictionary below.</h3>
-      <p>Your answer goes here…</p>
-
-      <h3>Provide an example of a link pointing to your favorite site.</h3>
-      <p>Your answer goes here…</p>
+        <li><b>Please provide an example of link pointing to your favorite site.</b></li>
+        <p><b>Answer:</b> Sure, here's the link pointing to my favorite website: <a href="https://twitch.tv/" title="Visit my favorite website">Twitch</a></p>
+      </ol>
     </section>
-    <img src="assets/images/webpage-image.jpg" alt="Decorative globe graphic with plans" id="floated-image">
   </main>
 
   <footer>
-    <p>© 2025 Aric Allen — <a href="#page-header">Back to Top</a></p>
+    <p>© 2025 Aric Allen — <a href="#top">Back to Top</a></p>
   </footer>
 </body>
 </html>
