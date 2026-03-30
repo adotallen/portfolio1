@@ -1,149 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset=UTF8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arkansas Movie Database</title>
     <meta name="author" content="Aric Allen">
     <link rel="stylesheet" href="assets/style/capstoneII.css">
-
+</head>
 <body>
 
-<!-- SEARCH PAGE MOCKUP -->
-<section class="page">
+    <section class="page">
+        <header class="header">
+            <h1>Arkansas Movie Database</h1>
+            <p>Search Arkansas-related movies or actors</p>
+        </header>
 
-    <header class="header">
-        <h1>Arkansas Movie Database</h1>
-        <p>Search Page Mockup</p>
-    </header>
-
-    <div class="search-bar">
-        <input type="text" placeholder="Search Arkansas-related movies or actors">
-        <button>Search</button>
-    </div>
-
-    <div class="movie-grid">
-
-        <div class="movie-card">
-            <div class="poster">Poster</div>
-            <div class="card-content">
-                <h3>True Grit</h3>
-                <p>Release Year: 2010</p>
-                <p>Arkansas Connection: Filmed in Arkansas</p>
-            </div>
+        <div class="search-bar">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Arkansas-related movies or actors"
+            >
+            <button id="searchBtn">Search</button>
         </div>
 
-        <div class="movie-card">
-            <div class="poster">Poster</div>
-            <div class="card-content">
-                <h3>Sling Blade</h3>
-                <p>Release Year: 1996</p>
-                <p>Arkansas Connection: Arkansas-based actor</p>
-            </div>
+        <div id="statusMessage" class="status-message"></div>
+
+        <div class="button-row">
+            <button id="loadFeaturedBtn">Load Arkansas Featured Titles</button>
         </div>
 
-        <div class="movie-card">
-            <div class="poster">Poster</div>
-            <div class="card-content">
-                <h3>Mud</h3>
-                <p>Release Year: 2012</p>
-                <p>Arkansas Connection: Regional relevance</p>
-            </div>
+        <div class="movie-grid" id="movieGrid">
+            <!-- Search results go here -->
         </div>
+    </section>
 
-    </div>
+    <section class="page hidden" id="movieDetailSection">
+        <header class="header">
+            <h1>Movie Detail Page</h1>
+        </header>
 
-</section>
+        <div class="detail-layout" id="movieDetailContent">
+            <!-- Movie details go here -->
+        </div>
+    </section>
 
+    <section class="page hidden" id="actorDetailSection">
+        <header class="header">
+            <h1>Actor Profile Page</h1>
+        </header>
 
-<!-- MOVIE DETAIL PAGE -->
-<section class="page">
+        <div class="detail-layout" id="actorDetailContent">
+            <!-- Actor details go here -->
+        </div>
+    </section>
 
-<header class="header">
-    <h1>Movie Detail Page</h1>
-</header>
-
-<div class="detail-layout">
-
-    <div class="large-poster">Movie Poster</div>
-
-    <div class="movie-info">
-
-        <h2>True Grit</h2>
-
-        <p><strong>Release Date:</strong> December 22, 2010</p>
-        <p><strong>Genre:</strong> Western / Drama</p>
-
-        <h3>Overview</h3>
-
-        <p>
-        A determined young girl hires a U.S. Marshal to help track down her
-        father’s killer in this western adventure.
-        </p>
-
-        <h3>Arkansas Connection</h3>
-
-        <p>
-        This section would describe how the movie is connected to Arkansas.
-        </p>
-
-        <h3>Cast</h3>
-
-        <ul>
-            <li>Jeff Bridges</li>
-            <li>Hailee Steinfeld</li>
-            <li>Matt Damon</li>
-        </ul>
-
-        <button>View Actor Profile</button>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- ACTOR PROFILE PAGE -->
-<section class="page">
-
-<header class="header">
-    <h1>Actor Profile Page</h1>
-</header>
-
-<div class="detail-layout">
-
-    <div class="large-poster">Actor Photo</div>
-
-    <div class="movie-info">
-
-        <h2>Billy Bob Thornton</h2>
-
-        <p><strong>Date of Birth:</strong> August 4, 1955</p>
-        <p><strong>Place of Birth:</strong> Hot Springs, Arkansas</p>
-
-        <h3>Biography</h3>
-
-        <p>
-        Billy Bob Thornton is an actor, filmmaker, and musician with strong
-        Arkansas roots.
-        </p>
-
-        <h3>Known Films</h3>
-
-        <ul>
-            <li>Sling Blade</li>
-            <li>Armageddon</li>
-            <li>Friday Night Lights</li>
-        </ul>
-
-        <button>Back to Movie</button>
-
-    </div>
-
-</div>
-
-</section>
-
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
