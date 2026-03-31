@@ -6,13 +6,13 @@
 }
 
 body{
-    background:#f4f6f8;
+    background:#f8f9fa;
     padding:40px;
     color:#222;
 }
 
 .page{
-    background:white;
+    background:f8f9fa;
     border:1px solid #ccc;
     padding:25px;
     margin-bottom:40px;
@@ -24,7 +24,7 @@ body{
 }
 
 .header{
-    background:#007b8b;
+    background:#4f6d7a;
     color:white;
     padding:15px;
     margin-bottom:20px;
@@ -48,7 +48,7 @@ body{
 
 .search-bar button{
     padding:10px 16px;
-    background:#007b8b;
+    background:#4f6d7a;
     color:white;
     border:none;
     border-radius:5px;
